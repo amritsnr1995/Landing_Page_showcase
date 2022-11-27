@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!-- fontawesome icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Showcase</title>
+  </head>
+  <body>
+    <!-- Page 1 (Intro)-->
+    <section id="page_1" class="page">
+      <h1>Top tourist attractions in Tokyo: the best sightseeing spots</h1>
+      <p>
+        Explore Tokyo’s historical sites, romantic places and some of the other
+        unique places that make this city so special.
+      </p>
+      <div>
+        <a href="#page_2" class="btn"
+          >Next Page<i class="fas fa-arrow-circle-down icon_margin_left"></i
+        ></a>
+      </div>
+    </section>
+
+    <!-- Page 2 (Intro)-->
+    <section id="page_2" class="page">
+      <h1>Sensoji Temple</h1>
+      <p>
+        Asakusa’s Sensoji Temple is a tremendously popular destination for visitors. Beyond the iconic Kaminarimon Gate is Nakamise Dori souvenir-shopping street, which leads to a complex of fascinating religious structures.
+      </p>
+      <div>
+        <a href="#page_1" class="btn btn--dark"
+          >Prev Page<i class="fas fa-arrow-circle-up icon_margin_left"></i
+        ></a>
+        <a href="#page_3" class="btn"
+          >Next Page<i class="fas fa-arrow-circle-down icon_margin_left"></i
+        ></a>
+      </div>
+    </section>
+    <!-- Page 3 (Intro)-->
+    <section id="page_3" class="page">
+      <h1>Shinbashi</h1>
+      <p>
+        The beating heart of old-fashioned office Tokyo. Come here to find out how Japan’s corporate warriors relax after a hard day at work. Join the fun in a packed izakaya pub!
+      </p>
+      <div>
+        <a href="#page_2" class="btn btn--dark"
+          >Prev Page<i class="fas fa-arrow-circle-up icon_margin_left"></i
+        ></a>
+        <a href="#page_4" class="btn"
+          >Next Page<i class="fas fa-arrow-circle-down icon_margin_left"></i
+        ></a>
+      </div>
+    </section>
+    <!-- Page 4 (Intro)-->
+    <section id="page_4" class="page">
+      <h1>Shibuya</h1>
+      <p>
+        There are several notable landmarks in Shibuya area such as Shibuya Crossing, Shibuya 109 and Hachiko Statue at Shibuya Station. Although Shibuya has been one of the most popular districts in Tokyo for the past years, it’s now hotter place to visit than ever.
+      </p>
+      <div>
+        <a href="#page_3" class="btn"
+          >Prev Page<i class="fas fa-arrow-circle-up icon_margin_left"></i
+        ></a>
+      </div>
+    </section>
+    <!-- Jquery -->
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
+    <script>
+      // Smooth Scrolling
+      $(".btn").on("click", function (event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          const hash = this.hash;
+          $("html, body").animate(
+            {
+              scrollTop: $(hash).offset().top,
+            },
+            800
+          );
+        }
+      });
+    </script>
+  </body>
+</html>

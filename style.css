@@ -1,0 +1,141 @@
+:root {
+  --page-1-color: steelblue;
+  --page-2-color: tan;
+  --page-3-color: teal;
+  --page-4-color: slateblue;
+  --animate-speed: 1s;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  line-height: 1.4;
+  color: #fff;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+/* Page Colors */
+#page_1 {
+  /* background: var(--page-1-color); */
+  background-image: linear-gradient(
+      to bottom,
+      rgba(242, 6, 21, 0.8),
+      rgba(13, 8, 107, 0.9)
+    ),
+    url("img/tokyo.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#page_2 {
+  /* background: var(--page-2-color); */
+  background-image: linear-gradient(
+   to bottom,
+   rgba(39, 199, 84, 0.8),
+   rgba(13, 8, 107, 0.9)
+ ),
+ url("img/sensoji.jpg");
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+}
+
+#page_3 {
+  /* background: var(--page-3-color); */
+  background-image: linear-gradient(
+   to bottom,
+   rgba(51, 49, 51, 0.8),
+   rgba(8, 107, 63, 0.9)
+ ),
+ url("img/shinbasi.jpg");
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+}
+
+#page_4 {
+  /* background: var(--page-4-color); */
+  background-image: linear-gradient(
+   to bottom,
+   rgba(29, 192, 97, 0.8),
+   rgba(195, 176, 27, 0.9)
+ ),
+ url("img/shibuya.jpg");
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+}
+
+.page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+  padding: 0 4rem;
+}
+.page h1 {
+  font-size: 4rem;
+  line-height: 1.2;
+  margin: 1rem;
+  font-weight: 500;
+}
+
+.page p {
+  font-size: 1.2rem;
+  font-weight: 100;
+}
+
+.btn {
+  display: inline-block;
+  background: #f4f4f4;
+  padding: 1rem 2rem;
+  text-decoration: none;
+  margin-top: 1rem;
+
+  font-style: 1.1rem;
+  color: #333;
+  transition: all 0.3s ease-in;
+  border: none;
+}
+.btn:hover,
+.btn--dark {
+  background: #333;
+  color: #fff;
+}
+.btn--dark:hover {
+  background: #f4f4f4;
+  color: #333;
+}
+.btn .icon_margin_left {
+  margin-left: 0.5rem;
+}
+
+/* Page Animation */
+#page_1 h1 {
+  transform: translateY(-1200px);
+  animation: heading;
+  animation-duration: var(--animate-speed);
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+}
+#page_1 p {
+  transform: translateX(-1800px);
+  animation: paragraph;
+  animation-duration: var(--animate-speed);
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-in;
+  animation-delay: 1s;
+}
+@keyframes heading {
+  to {
+    transform: translateY(0);
+  }
+}
+@keyframes paragraph {
+  to {
+    transform: translateX(0);
+  }
+}
